@@ -1,0 +1,16 @@
+{
+  "name": "count-schlumux",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ThibWeb/count-schlumux",
+  "description": "A little API to count arbitrary things",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ThibWeb/count-schlumux"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true,
+  "scripts": {
+  }
+}
