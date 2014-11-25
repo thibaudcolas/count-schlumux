@@ -11,7 +11,10 @@
     "node": ">=0.10.0"
   },
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon server.js",
+    "lint": "jshint . --exclude=node_modules/**/*.js"
+  },
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^2.0.1",
@@ -19,6 +22,8 @@
   },
   "dependencies": {
     "body-parser": "^1.9.3",
-    "express": "^4.10.3"
+    "express": "^4.10.3",
+    "mongoskin": "^1.4.4",
+    "morgan": "^1.5.0"
   }
 }
