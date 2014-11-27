@@ -12,8 +12,9 @@
   },
   "private": true,
   "scripts": {
-    "start": "nodemon server.js",
-    "lint": "jshint . --exclude=node_modules",
+    "start": "node server.js",
+    "serve": "nodemon server.js",
+    "lint": "jshint .",
     "test": "mocha test/*.js"
   },
   "devDependencies": {
