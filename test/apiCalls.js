@@ -21,13 +21,10 @@ describe('calls to the count-schlumux API', function() {
   });
 
   it('creates a new counter', function(done) {
+    var id = '0';
+
     request
-      .put(devURL + '/count/')
-      .send({
-        name: 'example.com',
-        description: 'Example counter',
-        value: 0
-      })
+      .put(devURL + '/count/' + id)
       .end(function(err, res) {
         expect(err).to.be(null);
         done();
@@ -60,7 +57,7 @@ describe('calls to the count-schlumux API', function() {
     var id = '0';
 
     request
-      .del(devURL + '/count' + id)
+      .del(devURL + '/count/' + id)
       .end(function(err, res) {
         expect(err).to.be(null);
         done();
