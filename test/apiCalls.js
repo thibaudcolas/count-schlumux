@@ -7,19 +7,6 @@ var devURL = 'http://localhost:3000';
 
 describe('calls to the count-schlumux API', function() {
 
-  it('simulates creation of a new counter using Mocky', function(done) {
-    request
-      .post('http://www.mocky.io/v2/54725942db3204c00dfeda17')
-      .send({
-        id: 'example.com'
-      })
-      .end(function(err, res) {
-        expect(err).to.be(null);
-        expect(res.body.id).to.eql('example.com');
-        done();
-      });
-  });
-
   it('creates a new counter', function(done) {
     var id = '0';
 
@@ -27,6 +14,7 @@ describe('calls to the count-schlumux API', function() {
       .put(devURL + '/count/' + id)
       .end(function(err, res) {
         expect(err).to.be(null);
+        expect(res.ok).to.be.ok();
         done();
       });
   });
@@ -38,6 +26,7 @@ describe('calls to the count-schlumux API', function() {
       .get(devURL + '/count/' + id)
       .end(function(err, res) {
         expect(err).to.be(null);
+        expect(res.ok).to.be.ok();
         done();
       });
   });
@@ -49,6 +38,7 @@ describe('calls to the count-schlumux API', function() {
       .post(devURL + '/count/' + id)
       .end(function(err, res) {
         expect(err).to.be(null);
+        expect(res.ok).to.be.ok();
         done();
       });
   });
@@ -60,6 +50,7 @@ describe('calls to the count-schlumux API', function() {
       .del(devURL + '/count/' + id)
       .end(function(err, res) {
         expect(err).to.be(null);
+        expect(res.ok).to.be.ok();
         done();
       });
   });
