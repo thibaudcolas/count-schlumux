@@ -1,9 +1,9 @@
 'use strict';
 
-var request = require('superagent');
+var request = require('supertest');
 var expect = require('expect.js');
 
-var devURL = 'http://localhost:3000';
+request = request('http://localhost:3000');
 
 describe('calls to the count-schlumux API', function() {
 
